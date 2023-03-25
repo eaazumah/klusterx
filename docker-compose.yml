@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  klusterx:
+    build:
+      context: .
+    restart: unless-stopped
+    volumes:
+      - ./logs:/logs
+    ports:
+      - "80:80"
