@@ -1,0 +1,42 @@
+name: Code Quality
+
+on:
+  pull_request:
+    branches-ignore:
+      - master
+  push:
+    branches-ignore:
+      - master
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: yarn install
+      - name: Lint
+        run: yarn lint
+
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: yarn install
+      - name: Test
+        run: yarn test
+      - name: Coverage
+        run: yarn coverage
+
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: yarn install
+      - name: Audit
+        run: yarn audit --audit-level=high
