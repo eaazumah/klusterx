@@ -21,7 +21,7 @@ export interface ISettings {
   theme: 'light' | 'dark'
 }
 
-export interface ISettingsAction extends PayloadAction<Partial<ISettings>> {}
+export type ISettingsAction = PayloadAction<Partial<ISettings>>
 
 export interface IReduxSate {
   settings: ISettings

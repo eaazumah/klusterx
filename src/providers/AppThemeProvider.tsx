@@ -1,11 +1,4 @@
-import {
-  Container,
-  MantineProvider,
-  MantineThemeOverride,
-  Paper,
-  useMantineTheme,
-} from '@mantine/core'
-import { Notifications } from '@mantine/notifications'
+import { MantineProvider, MantineThemeOverride, Paper, useMantineTheme } from '@mantine/core'
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import useAppSettings from '../hooks/useAppSettings'
@@ -43,24 +36,17 @@ const StyledThemeProvider: React.FC<Props> = ({ children }) => {
 const AppThemeProvider: React.FC<Props> = ({ children }) => {
   return (
     <MantineThemeProvider>
-      <Notifications position='top-right'>
-        <StyledThemeProvider>
-          <StyledPaper>{children}</StyledPaper>
-        </StyledThemeProvider>
-      </Notifications>
+      <StyledThemeProvider>
+        <StyledPaper>{children}</StyledPaper>
+      </StyledThemeProvider>
     </MantineThemeProvider>
   )
 }
 
-const Styled = styled(Container)`
-  min-height: 85vh;
-  padding-top: 56px;
-`
-
 const StyledPaper = styled(Paper)`
   border-radius: 0px;
   background-color: ${({ theme }) => {
-    return theme.colorScheme === 'dark' ? theme.colors!.dark![6] : theme.colors!.white
+    return theme.colorScheme === 'dark' ? theme.colors?.dark?.[6] : theme.colors?.white
   }};
 `
 
