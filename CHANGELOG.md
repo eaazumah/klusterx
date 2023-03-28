@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/eaazumah/klusterx/compare/v1.0.0...v1.1.0) (2023-03-28)
+
+
+### Features
+
+* add main layout ([06bb151](https://github.com/eaazumah/klusterx/commit/06bb1514a063e3a31ca26296887d300f6ec72332))
+
 # 1.0.0 (2023-03-27)
 
 
