@@ -3,7 +3,7 @@ import MainLayout from '../layouts/MainLayout'
 import Table from '../table/Table'
 import NoMatch from './NoMatch'
 
-const routes = (): RouteObject[] => [
+export const routes = (): RouteObject[] => [
   {
     path: '/',
     element: <MainLayout />,

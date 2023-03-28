@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Table: React.FC = () => {
-  return <div>Table</div>
+  return <div>League Table</div>
 }
 
 export default Table
