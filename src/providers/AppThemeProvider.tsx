@@ -1,4 +1,4 @@
-import { MantineProvider, MantineThemeOverride, Paper, useMantineTheme } from '@mantine/core'
+import { Container, MantineProvider, MantineThemeOverride, useMantineTheme } from '@mantine/core'
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import useAppSettings from '../hooks/useAppSettings'
@@ -37,14 +37,15 @@ const AppThemeProvider: React.FC<Props> = ({ children }) => {
   return (
     <MantineThemeProvider>
       <StyledThemeProvider>
-        <StyledPaper>{children}</StyledPaper>
+        <Styled fluid>{children}</Styled>
       </StyledThemeProvider>
     </MantineThemeProvider>
   )
 }
 
-const StyledPaper = styled(Paper)`
-  border-radius: 0px;
+const Styled = styled(Container)`
+  height: 100vh;
+  padding: 0px !important;
   background-color: ${({ theme }) => {
     return theme.colorScheme === 'dark' ? theme.colors?.dark?.[6] : theme.colors?.white
   }};
