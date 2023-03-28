@@ -9,20 +9,17 @@ import { IReduxSate } from '../types/declarations'
 
 interface Options {
   store?: any
-  mocks?: Array<any>
   preloadedState?: Partial<IReduxSate>
 }
 
 interface OptionsWithRouter {
   store?: any
-  mocks?: Array<any>
   preloadedState?: Partial<IReduxSate>
 }
 
 const render = (
   ui: React.ReactElement,
   {
-    mocks = [],
     preloadedState,
     store = configureStore({
       preloadedState,
@@ -40,7 +37,6 @@ const render = (
 const renderWithRouter = (
   ui: React.ReactElement,
   {
-    mocks = [],
     preloadedState,
     store = configureStore({
       preloadedState,
