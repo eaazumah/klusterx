@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouteObject } from 'react-router-dom'
 import MainLayout from '../layouts/MainLayout'
-import Table from '../table/Table'
+import Table from '../table/LeagueTable'
 import NoMatch from './NoMatch'
 
 export const routes = (): RouteObject[] => [
