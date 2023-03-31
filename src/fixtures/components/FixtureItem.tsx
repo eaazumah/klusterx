@@ -1,7 +1,6 @@
 import { Badge, Divider, Flex, Group, Space, Text } from '@mantine/core'
 import { format } from 'date-fns'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import Conditional from '../../components/Conditional'
 import { Fixture } from '../../types/declarations'
@@ -11,7 +10,6 @@ type Props = {
 }
 
 const FixtureItem: React.FC<Props> = ({ fixture }) => {
-  const navigate = useNavigate()
   return (
     <Styled>
       <Flex className='fixture'>

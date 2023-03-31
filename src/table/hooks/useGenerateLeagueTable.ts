@@ -4,7 +4,7 @@ const useGenerateLeagueTable = (data: Match[]) => {
   const teams: Record<string, Team> = {}
 
   data.forEach((match: Match) => {
-    const { score, date } = match
+    const { score } = match
     const [homeTeam, awayTeam] = Object.keys(score)
 
     // Initialize the team objects

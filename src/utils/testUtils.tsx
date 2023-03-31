@@ -54,7 +54,6 @@ const renderWithRouter = (
 const renderHook = <TProps, TResult>(
   callback: (props: TProps) => TResult,
   {
-    mocks = [],
     preloadedState,
     store = configureStore({
       preloadedState,

@@ -11,7 +11,7 @@ const TeamFixtures: React.FC = () => {
   const params = useParams()
   const navigate = useNavigate()
   const fixturesByDate = useGenerateFixtures(data)
-  const teamFixturesByDate = useFilterTeamFixtures(fixturesByDate, params.teamName!)
+  const teamFixturesByDate = useFilterTeamFixtures(fixturesByDate, params.teamName ?? '')
   return (
     <Styled size='lg'>
       <Group>

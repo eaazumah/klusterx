@@ -1,7 +1,6 @@
+import { MantineThemeOverride } from '@mantine/core'
 import { PayloadAction } from '@reduxjs/toolkit'
 import { AnyAction, CombinedState, Reducer } from 'redux'
-
-import { MantineThemeOverride } from '@mantine/core'
 
 import 'styled-components'
 
