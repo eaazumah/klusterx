@@ -2,15 +2,16 @@ import { ActionIcon, Container, Group, Header, Text } from '@mantine/core'
 import { IconMoon, IconSun } from '@tabler/icons-react'
 import cx from 'classnames'
 import React from 'react'
-import { useMatch } from 'react-router-dom'
+import { useMatch, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import Conditional from '../../components/Conditional'
 import useAppSettings from '../../hooks/useAppSettings'
 
 const MainHeader: React.FC = () => {
-  const { toggleTheme, theme } = useAppSettings()
+  const navigate = useNavigate()
   const tableNavActive = useMatch('/table')
   const fixturesNavActive = useMatch('/fixtures')
+  const { toggleTheme, theme } = useAppSettings()
   const teamFixturesNavActive = useMatch('/fixtures/:teamName')
 
   return (
@@ -18,14 +19,12 @@ const MainHeader: React.FC = () => {
       <Container size='lg'>
         <Group position='apart'>
           <Group className='inner' spacing='lg'>
-            <a className='brand'>
-              <Text size='lg' weight={600} align='center' italic color='teal.7'>
-                KlusterX
-              </Text>
-            </a>
+            <Text className='brand' size='lg' weight={600} align='center' italic color='teal.7'>
+              KlusterX
+            </Text>
             <Group spacing='md'>
               <a
-                href='/table'
+                onClick={() => navigate('/table')}
                 className={cx('nav-item', {
                   'active-nav-item': tableNavActive,
                 })}
@@ -35,7 +34,7 @@ const MainHeader: React.FC = () => {
                 </Text>
               </a>
               <a
-                href='/fixtures'
+                onClick={() => navigate('/fixtures')}
                 className={cx('nav-item', {
                   'active-nav-item': fixturesNavActive || teamFixturesNavActive,
                 })}
@@ -68,10 +67,6 @@ const Styled = styled(Header)`
   .inner {
     height: 56px;
     align-items: center;
-  }
-
-  .brand {
-    cursor: pointer;
   }
 
   .nav-item {

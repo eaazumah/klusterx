@@ -9,9 +9,6 @@ const LeagueTable: React.FC = () => {
   return (
     <Styled size='lg'>
       <Badge variant='dot'>League Table</Badge>
-      {/* <Text size='xl' weight={600} align='center' color='teal.8'>
-        League Table
-      </Text> */}
       <Space h='xl' />
       <Table striped highlightOnHover horizontalSpacing='xl' verticalSpacing='sm'>
         <thead>

@@ -54,3 +54,17 @@ export interface Team {
   points: number
   rank?: number
 }
+
+export interface Fixture {
+  date: string
+  homeTeam: string
+  awayTeam: string
+  homeScore: number
+  awayScore: number
+  upComing: boolean
+}
+
+export interface FixturesByDate {
+  date: string
+  fixtures: Fixture[]
+}

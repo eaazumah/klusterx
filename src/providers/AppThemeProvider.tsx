@@ -25,7 +25,11 @@ interface Props {
 
 const MantineThemeProvider: React.FC<Props> = ({ children }) => {
   const { theme } = useAppSettings()
-  return <MantineProvider theme={themes[theme]}>{children}</MantineProvider>
+  return (
+    <MantineProvider theme={themes[theme]} withGlobalStyles withNormalizeCSS>
+      {children}
+    </MantineProvider>
+  )
 }
 
 const StyledThemeProvider: React.FC<Props> = ({ children }) => {
@@ -45,6 +49,7 @@ const AppThemeProvider: React.FC<Props> = ({ children }) => {
 
 const Styled = styled(Container)`
   height: 100vh;
+  overflow: auto;
   padding: 0px !important;
   background-color: ${({ theme }) => {
     return theme.colorScheme === 'dark' ? theme.colors?.dark?.[6] : theme.colors?.white
