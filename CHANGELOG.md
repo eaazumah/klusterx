@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/eaazumah/klusterx/compare/v1.1.0...v1.2.0) (2023-04-02)
+
+
+### Features
+
+* add league table ([039dd4b](https://github.com/eaazumah/klusterx/commit/039dd4b62f830efd202739f2f8ec44548816b89b))
+* add league table, league fixtures, and team fixtures ([bcdd431](https://github.com/eaazumah/klusterx/commit/bcdd431eb192f353f02e7964ae56e4d0007f6cc1))
+
 # [1.1.0](https://github.com/eaazumah/klusterx/compare/v1.0.0...v1.1.0) (2023-03-28)
 
 
