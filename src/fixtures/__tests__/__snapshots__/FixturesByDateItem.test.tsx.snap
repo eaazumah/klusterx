@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FixturesByDateItem should render fixtures by date item  1`] = `[Function]`;
+
+exports[`FixturesByDateItem should render fixtures by date item with data 1`] = `
+.c0 .fixture {
+  margin: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.c0 .badge {
+  text-transform: none;
+}
+
+<div>
+  <div
+    class=""
+  >
+    <h1
+      class="mantine-Text-root mantine-Title-root mantine-99mnmj"
+    >
+      11 September 2021
+    </h1>
+    <div
+      class="mantine-Divider-root mantine-Divider-horizontal mantine-urkk9t"
+      role="separator"
+    />
+    <div
+      class="c0"
+    >
+      <div
+        class="fixture mantine-1jggmkl"
+      >
+        <div
+          class="mantine-Group-root mantine-7ftt1"
+        >
+          <a
+            class="mantine-Text-root mantine-bwhnbm"
+            href="/fixtures/Team A"
+          >
+            Team A
+          </a>
+          <div
+            class="mantine-Text-root mantine-4fbajm"
+          >
+            vs
+          </div>
+          <a
+            class="mantine-Text-root mantine-bwhnbm"
+            href="/fixtures/Team B"
+          >
+            Team B
+          </a>
+        </div>
+        <div
+          class="mantine-1gn90f5"
+        />
+        <div
+          class="mantine-Group-root mantine-7ftt1"
+        >
+          <div
+            class="mantine-Text-root mantine-1d564l0"
+          >
+            1
+             - 
+            0
+          </div>
+        </div>
+        <div
+          class="mantine-1gn90f5"
+        />
+        <div
+          class="mantine-Text-root mantine-1d564l0"
+        >
+          12:30
+        </div>
+      </div>
+      <div
+        class="mantine-Divider-root mantine-Divider-horizontal mantine-urkk9t"
+        role="separator"
+      />
+    </div>
+    <div
+      class="mantine-1cw9ra3"
+    />
+  </div>
+</div>
+`;

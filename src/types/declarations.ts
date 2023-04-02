@@ -1,13 +1,14 @@
+import { MantineThemeOverride } from '@mantine/core'
 import { PayloadAction } from '@reduxjs/toolkit'
 import { AnyAction, CombinedState, Reducer } from 'redux'
 
-// import { MantineThemeOverride } from '@mantine/core'
-
 import 'styled-components'
 
-// declare module 'styled-components' {
-//   export interface DefaultTheme extends MantineThemeOverride {}
-// }
+declare module 'styled-components' {
+  export interface DefaultTheme extends MantineThemeOverride {
+    overrides?: string
+  }
+}
 
 export interface INotification {
   id: string
@@ -36,3 +37,35 @@ export type DeepPartial<T> = T extends object
       [P in keyof T]?: DeepPartial<T[P]>
     }
   : T
+
+export interface Match {
+  score: Record<string, number | null>
+  date: string
+}
+
+export interface Team {
+  name: string
+  played: number
+  won: number
+  drawn: number
+  lost: number
+  gf: number
+  ga: number
+  gd: number
+  points: number
+  rank?: number
+}
+
+export interface Fixture {
+  date: string
+  homeTeam: string
+  awayTeam: string
+  homeScore: number | null
+  awayScore: number | null
+  upComing: boolean
+}
+
+export interface FixturesByDate {
+  date: string
+  fixtures: Fixture[]
+}

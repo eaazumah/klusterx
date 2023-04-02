@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FixtureItem should render fixture item  1`] = `[Function]`;
+
+exports[`FixtureItem should render fixture item with data 1`] = `
+.c0 .fixture {
+  margin: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.c0 .badge {
+  text-transform: none;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="fixture mantine-1jggmkl"
+    >
+      <div
+        class="mantine-Group-root mantine-7ftt1"
+      >
+        <a
+          class="mantine-Text-root mantine-bwhnbm"
+          href="/fixtures/Team A"
+        >
+          Team A
+        </a>
+        <div
+          class="mantine-Text-root mantine-4fbajm"
+        >
+          vs
+        </div>
+        <a
+          class="mantine-Text-root mantine-bwhnbm"
+          href="/fixtures/Team B"
+        >
+          Team B
+        </a>
+      </div>
+      <div
+        class="mantine-1gn90f5"
+      />
+      <div
+        class="mantine-Group-root mantine-7ftt1"
+      >
+        <div
+          class="mantine-Text-root mantine-1d564l0"
+        >
+          1
+           - 
+          0
+        </div>
+      </div>
+      <div
+        class="mantine-1gn90f5"
+      />
+      <div
+        class="mantine-Text-root mantine-1d564l0"
+      >
+        12:30
+      </div>
+    </div>
+    <div
+      class="mantine-Divider-root mantine-Divider-horizontal mantine-urkk9t"
+      role="separator"
+    />
+  </div>
+</div>
+`;
+
+exports[`FixtureItem should render fixture item with data and up coming 1`] = `
+.c0 .fixture {
+  margin: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.c0 .badge {
+  text-transform: none;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="fixture mantine-1jggmkl"
+    >
+      <div
+        class="mantine-Group-root mantine-7ftt1"
+      >
+        <a
+          class="mantine-Text-root mantine-bwhnbm"
+          href="/fixtures/Team A"
+        >
+          Team A
+        </a>
+        <div
+          class="mantine-Text-root mantine-4fbajm"
+        >
+          vs
+        </div>
+        <a
+          class="mantine-Text-root mantine-bwhnbm"
+          href="/fixtures/Team B"
+        >
+          Team B
+        </a>
+      </div>
+      <div
+        class="mantine-1gn90f5"
+      />
+      <div
+        class="mantine-Badge-root badge mantine-4y3x5h"
+      >
+        <span
+          class="mantine-1t45alw mantine-Badge-inner"
+        >
+          Upcoming
+        </span>
+      </div>
+      <div
+        class="mantine-1gn90f5"
+      />
+      <div
+        class="mantine-Text-root mantine-1d564l0"
+      >
+        12:30
+      </div>
+    </div>
+    <div
+      class="mantine-Divider-root mantine-Divider-horizontal mantine-urkk9t"
+      role="separator"
+    />
+  </div>
+</div>
+`;

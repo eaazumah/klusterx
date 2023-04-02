@@ -1,9 +1,11 @@
 import { createBrowserRouter, RouteObject } from 'react-router-dom'
+import Fixtures from '../fixtures/Fixtures'
+import TeamFixtures from '../fixtures/TeamFixtures'
 import MainLayout from '../layouts/MainLayout'
-import Table from '../table/Table'
+import Table from '../table/LeagueTable'
 import NoMatch from './NoMatch'
 
-export const routes = (): RouteObject[] => [
+export const getRoutes = (): RouteObject[] => [
   {
     path: '/',
     element: <MainLayout />,
@@ -15,6 +17,14 @@ export const routes = (): RouteObject[] => [
       {
         path: '/table',
         element: <Table />,
+      },
+      {
+        path: '/fixtures',
+        element: <Fixtures />,
+      },
+      {
+        path: '/fixtures/:teamName',
+        element: <TeamFixtures />,
       },
     ],
   },
@@ -30,6 +40,6 @@ export const routes = (): RouteObject[] => [
   },
 ]
 
-const router = createBrowserRouter(routes())
+const router = createBrowserRouter(getRoutes())
 
 export default router

@@ -1,29 +1,44 @@
 import { ActionIcon, Container, Group, Header, Text } from '@mantine/core'
 import { IconMoon, IconSun } from '@tabler/icons-react'
+import cx from 'classnames'
 import React from 'react'
+import { useMatch, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import Conditional from '../../components/Conditional'
 import useAppSettings from '../../hooks/useAppSettings'
 
 const MainHeader: React.FC = () => {
+  const navigate = useNavigate()
+  const tableNavActive = useMatch('/table')
+  const fixturesNavActive = useMatch('/fixtures')
   const { toggleTheme, theme } = useAppSettings()
+  const teamFixturesNavActive = useMatch('/fixtures/:teamName')
+
   return (
     <Styled fixed height={56}>
       <Container size='lg'>
         <Group position='apart'>
           <Group className='inner' spacing='lg'>
-            <a className='brand'>
-              <Text size='lg' weight={600} align='center' italic color='teal.7'>
-                KlusterX
-              </Text>
-            </a>
+            <Text className='brand' size='lg' weight={600} align='center' italic color='teal.7'>
+              KlusterX
+            </Text>
             <Group spacing='md'>
-              <a className='nav-item'>
+              <a
+                onClick={() => navigate('/table')}
+                className={cx('nav-item', {
+                  'active-nav-item': tableNavActive,
+                })}
+              >
                 <Text size='md' weight={600} align='center' color='teal.8'>
                   Table
                 </Text>
               </a>
-              <a className='nav-item'>
+              <a
+                onClick={() => navigate('/fixtures')}
+                className={cx('nav-item', {
+                  'active-nav-item': fixturesNavActive || teamFixturesNavActive,
+                })}
+              >
                 <Text size='md' weight={600} align='center' color='teal.8'>
                   Fixtures
                 </Text>
@@ -54,10 +69,6 @@ const Styled = styled(Header)`
     align-items: center;
   }
 
-  .brand {
-    cursor: pointer;
-  }
-
   .nav-item {
     height: 55px;
     display: flex;
@@ -69,6 +80,10 @@ const Styled = styled(Header)`
   }
 
   .nav-item:hover {
+    border-bottom: 3px solid ${(props) => props.theme.colors?.teal?.[8]};
+  }
+
+  .active-nav-item {
     border-bottom: 3px solid ${(props) => props.theme.colors?.teal?.[8]};
   }
 `

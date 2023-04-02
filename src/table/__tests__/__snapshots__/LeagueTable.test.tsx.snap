@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LeagueTable should render table  1`] = `[Function]`;
+
+exports[`LeagueTable should render table with data  1`] = `
+.c0 {
+  padding-top: 100px;
+}
+
+<div>
+  <div
+    class="mantine-Container-root c0 mantine-1pdibkf"
+  >
+    <div
+      class="mantine-Badge-root mantine-1q104z4"
+    >
+      <span
+        class="mantine-1t45alw mantine-Badge-inner"
+      >
+        League Table
+      </span>
+    </div>
+    <div
+      class="mantine-1cw9ra3"
+    />
+    <table
+      class="mantine-Table-root mantine-1hu3wr5"
+      data-hover="true"
+      data-striped="true"
+    >
+      <thead>
+        <tr>
+          <th>
+            Position
+          </th>
+          <th>
+            Club
+          </th>
+          <th>
+            Played
+          </th>
+          <th>
+            Won
+          </th>
+          <th>
+            Drawn
+          </th>
+          <th>
+            Lost
+          </th>
+          <th>
+            GF
+          </th>
+          <th>
+            GA
+          </th>
+          <th>
+            GD
+          </th>
+          <th>
+            Points
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            1
+          </td>
+          <td>
+            <a
+              class="mantine-Text-root mantine-bwhnbm"
+              href="/fixtures/Team A"
+            >
+              Team A
+            </a>
+          </td>
+          <td>
+            1
+          </td>
+          <td>
+            1
+          </td>
+          <td>
+            0
+          </td>
+          <td>
+            0
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+        </tr>
+        <tr>
+          <td>
+            2
+          </td>
+          <td>
+            <a
+              class="mantine-Text-root mantine-bwhnbm"
+              href="/fixtures/Team C"
+            >
+              Team C
+            </a>
+          </td>
+          <td>
+            1
+          </td>
+          <td>
+            0
+          </td>
+          <td>
+            1
+          </td>
+          <td>
+            0
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            0
+          </td>
+          <td>
+            1
+          </td>
+        </tr>
+        <tr>
+          <td>
+            3
+          </td>
+          <td>
+            <a
+              class="mantine-Text-root mantine-bwhnbm"
+              href="/fixtures/Team B"
+            >
+              Team B
+            </a>
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            0
+          </td>
+          <td>
+            1
+          </td>
+          <td>
+            1
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            -2
+          </td>
+          <td>
+            1
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
