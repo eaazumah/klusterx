@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LeagueTable should render table  1`] = `
+exports[`LeagueTable should render table  1`] = `[Function]`;
+
+exports[`LeagueTable should render table with data  1`] = `
 .c0 {
   padding-top: 100px;
 }
@@ -68,34 +70,34 @@ exports[`LeagueTable should render table  1`] = `
           <td>
             <a
               class="mantine-Text-root mantine-bwhnbm"
-              href="/fixtures/Leicester City"
+              href="/fixtures/Team A"
             >
-              Leicester City
+              Team A
             </a>
           </td>
           <td>
-            6
+            1
           </td>
           <td>
-            3
-          </td>
-          <td>
-            3
+            1
           </td>
           <td>
             0
           </td>
           <td>
-            8
+            0
           </td>
           <td>
             3
           </td>
           <td>
-            5
+            1
           </td>
           <td>
-            12
+            2
+          </td>
+          <td>
+            3
           </td>
         </tr>
         <tr>
@@ -105,34 +107,34 @@ exports[`LeagueTable should render table  1`] = `
           <td>
             <a
               class="mantine-Text-root mantine-bwhnbm"
-              href="/fixtures/Liverpool"
+              href="/fixtures/Team C"
             >
-              Liverpool
+              Team C
             </a>
           </td>
           <td>
-            6
-          </td>
-          <td>
-            3
-          </td>
-          <td>
-            3
+            1
           </td>
           <td>
             0
           </td>
           <td>
-            8
+            1
           </td>
           <td>
-            4
+            0
           </td>
           <td>
-            4
+            2
           </td>
           <td>
-            12
+            2
+          </td>
+          <td>
+            0
+          </td>
+          <td>
+            1
           </td>
         </tr>
         <tr>
@@ -142,13 +144,19 @@ exports[`LeagueTable should render table  1`] = `
           <td>
             <a
               class="mantine-Text-root mantine-bwhnbm"
-              href="/fixtures/Manchester United"
+              href="/fixtures/Team B"
             >
-              Manchester United
+              Team B
             </a>
           </td>
           <td>
-            6
+            2
+          </td>
+          <td>
+            0
+          </td>
+          <td>
+            1
           </td>
           <td>
             1
@@ -157,167 +165,13 @@ exports[`LeagueTable should render table  1`] = `
             3
           </td>
           <td>
-            2
-          </td>
-          <td>
-            11
-          </td>
-          <td>
-            9
-          </td>
-          <td>
-            2
-          </td>
-          <td>
-            6
-          </td>
-        </tr>
-        <tr>
-          <td>
-            4
-          </td>
-          <td>
-            <a
-              class="mantine-Text-root mantine-bwhnbm"
-              href="/fixtures/Tottenham Hotspur"
-            >
-              Tottenham Hotspur
-            </a>
-          </td>
-          <td>
-            6
-          </td>
-          <td>
-            0
-          </td>
-          <td>
-            6
-          </td>
-          <td>
-            0
-          </td>
-          <td>
-            3
-          </td>
-          <td>
-            3
-          </td>
-          <td>
-            0
-          </td>
-          <td>
-            6
-          </td>
-        </tr>
-        <tr>
-          <td>
             5
           </td>
           <td>
-            <a
-              class="mantine-Text-root mantine-bwhnbm"
-              href="/fixtures/Manchester City"
-            >
-              Manchester City
-            </a>
-          </td>
-          <td>
-            6
+            -2
           </td>
           <td>
             1
-          </td>
-          <td>
-            3
-          </td>
-          <td>
-            2
-          </td>
-          <td>
-            4
-          </td>
-          <td>
-            5
-          </td>
-          <td>
-            -1
-          </td>
-          <td>
-            6
-          </td>
-        </tr>
-        <tr>
-          <td>
-            6
-          </td>
-          <td>
-            <a
-              class="mantine-Text-root mantine-bwhnbm"
-              href="/fixtures/Chelsea"
-            >
-              Chelsea
-            </a>
-          </td>
-          <td>
-            6
-          </td>
-          <td>
-            0
-          </td>
-          <td>
-            4
-          </td>
-          <td>
-            2
-          </td>
-          <td>
-            5
-          </td>
-          <td>
-            10
-          </td>
-          <td>
-            -5
-          </td>
-          <td>
-            4
-          </td>
-        </tr>
-        <tr>
-          <td>
-            7
-          </td>
-          <td>
-            <a
-              class="mantine-Text-root mantine-bwhnbm"
-              href="/fixtures/Arsenal"
-            >
-              Arsenal
-            </a>
-          </td>
-          <td>
-            6
-          </td>
-          <td>
-            0
-          </td>
-          <td>
-            4
-          </td>
-          <td>
-            2
-          </td>
-          <td>
-            5
-          </td>
-          <td>
-            10
-          </td>
-          <td>
-            -5
-          </td>
-          <td>
-            4
           </td>
         </tr>
       </tbody>

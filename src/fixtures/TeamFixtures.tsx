@@ -2,12 +2,13 @@ import { ActionIcon, Badge, Container, Group, Space } from '@mantine/core'
 import { IconArrowLeft } from '@tabler/icons-react'
 import { useNavigate, useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import data from '../data/data'
+import getData from '../data/data'
 import FixturesByDateItem from './components/FixturesByDateItem'
 import useFilterTeamFixtures from './hooks/useFilterTeamFixtures'
 import useGenerateFixtures from './hooks/useGenerateFixtures'
 
 const TeamFixtures: React.FC = () => {
+  const data = getData()
   const params = useParams()
   const navigate = useNavigate()
   const fixturesByDate = useGenerateFixtures(data)
@@ -21,8 +22,8 @@ const TeamFixtures: React.FC = () => {
         <Badge variant='dot'>{params.teamName} Fixtures</Badge>
       </Group>
       <Space h='xl' />
-      {teamFixturesByDate.map((fixtureByDate, index) => (
-        <FixturesByDateItem fixtureByDate={fixtureByDate} key={index} />
+      {teamFixturesByDate.map((fixturesByDate, index) => (
+        <FixturesByDateItem fixturesByDate={fixturesByDate} key={index} />
       ))}
     </Styled>
   )

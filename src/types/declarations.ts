@@ -5,7 +5,9 @@ import { AnyAction, CombinedState, Reducer } from 'redux'
 import 'styled-components'
 
 declare module 'styled-components' {
-  export interface DefaultTheme extends MantineThemeOverride {}
+  export interface DefaultTheme extends MantineThemeOverride {
+    overrides?: string
+  }
 }
 
 export interface INotification {
@@ -37,7 +39,7 @@ export type DeepPartial<T> = T extends object
   : T
 
 export interface Match {
-  score: Record<string, number>
+  score: Record<string, number | null>
   date: string
 }
 
@@ -58,8 +60,8 @@ export interface Fixture {
   date: string
   homeTeam: string
   awayTeam: string
-  homeScore: number
-  awayScore: number
+  homeScore: number | null
+  awayScore: number | null
   upComing: boolean
 }
 

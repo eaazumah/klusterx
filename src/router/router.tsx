@@ -5,7 +5,7 @@ import MainLayout from '../layouts/MainLayout'
 import Table from '../table/LeagueTable'
 import NoMatch from './NoMatch'
 
-export const routes = (): RouteObject[] => [
+export const getRoutes = (): RouteObject[] => [
   {
     path: '/',
     element: <MainLayout />,
@@ -40,6 +40,6 @@ export const routes = (): RouteObject[] => [
   },
 ]
 
-const router = createBrowserRouter(routes())
+const router = createBrowserRouter(getRoutes())
 
 export default router

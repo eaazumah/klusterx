@@ -90,4 +90,8 @@ export const data = [
   },
 ] as Match[]
 
-export default data
+const getData = () => {
+  return data
+}
+
+export default getData

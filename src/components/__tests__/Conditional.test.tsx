@@ -9,7 +9,6 @@ describe('Conditional', () => {
         <span>Test</span>
       </Conditional>,
     )
-
     expect(getByText('Test')).toBeInTheDocument()
   })
 
@@ -19,7 +18,6 @@ describe('Conditional', () => {
         <span>Test</span>
       </Conditional>,
     )
-
     expect(queryByText('Test')).toBeNull()
   })
 })

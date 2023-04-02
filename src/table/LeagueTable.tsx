@@ -1,10 +1,11 @@
 import { Badge, Container, Space, Table, Text } from '@mantine/core'
 import React from 'react'
 import styled from 'styled-components'
-import data from '../data/data'
+import getData from '../data/data'
 import useGenerateLeagueTable from './hooks/useGenerateLeagueTable'
 
 const LeagueTable: React.FC = () => {
+  const data = getData()
   const tableData = useGenerateLeagueTable(data)
   return (
     <Styled size='lg'>

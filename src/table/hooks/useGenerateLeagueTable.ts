@@ -1,15 +1,13 @@
 import { Match, Team } from '../../types/declarations'
 
 const useGenerateLeagueTable = (data: Match[]) => {
-  const teams: Record<string, Team> = {}
-
-  data.forEach((match: Match) => {
+  const teams = data.reduce((acc, match) => {
     const { score } = match
     const [homeTeam, awayTeam] = Object.keys(score)
 
     // Initialize the team objects
-    if (!teams[homeTeam]) {
-      teams[homeTeam] = {
+    if (!acc[homeTeam]) {
+      acc[homeTeam] = {
         name: homeTeam,
         played: 0,
         won: 0,
@@ -21,8 +19,8 @@ const useGenerateLeagueTable = (data: Match[]) => {
         points: 0,
       }
     }
-    if (!teams[awayTeam]) {
-      teams[awayTeam] = {
+    if (!acc[awayTeam]) {
+      acc[awayTeam] = {
         name: awayTeam,
         played: 0,
         won: 0,
@@ -36,32 +34,40 @@ const useGenerateLeagueTable = (data: Match[]) => {
     }
 
     // Update the teams' stats based on the match result
-    teams[homeTeam].played++
-    teams[awayTeam].played++
 
-    if (score[homeTeam] > score[awayTeam]) {
-      teams[homeTeam].won++
-      teams[awayTeam].lost++
-      teams[homeTeam].points += 3
-    } else if (score[homeTeam] < score[awayTeam]) {
-      teams[homeTeam].lost++
-      teams[awayTeam].won++
-      teams[awayTeam].points += 3
+    const homeScore = score[homeTeam]
+    const awayScore = score[awayTeam]
+
+    if (homeScore === null || awayScore === null) return acc
+
+    acc[homeTeam].played++
+    acc[awayTeam].played++
+
+    if (homeScore > awayScore) {
+      acc[homeTeam].won++
+      acc[awayTeam].lost++
+      acc[homeTeam].points += 3
+    } else if (homeScore < awayScore) {
+      acc[homeTeam].lost++
+      acc[awayTeam].won++
+      acc[awayTeam].points += 3
     } else {
-      teams[homeTeam].drawn++
-      teams[awayTeam].drawn++
-      teams[homeTeam].points++
-      teams[awayTeam].points++
+      acc[homeTeam].drawn++
+      acc[awayTeam].drawn++
+      acc[homeTeam].points++
+      acc[awayTeam].points++
     }
 
-    teams[homeTeam].gf += score[homeTeam] || 0
-    teams[homeTeam].ga += score[awayTeam] || 0
-    teams[awayTeam].gf += score[awayTeam] || 0
-    teams[awayTeam].ga += score[homeTeam] || 0
+    acc[homeTeam].gf += homeScore
+    acc[homeTeam].ga += awayScore
+    acc[awayTeam].gf += awayScore
+    acc[awayTeam].ga += homeScore
 
-    teams[homeTeam].gd = teams[homeTeam].gf - teams[homeTeam].ga
-    teams[awayTeam].gd = teams[awayTeam].gf - teams[awayTeam].ga
-  })
+    acc[homeTeam].gd = acc[homeTeam].gf - acc[homeTeam].ga
+    acc[awayTeam].gd = acc[awayTeam].gf - acc[awayTeam].ga
+
+    return acc
+  }, {} as Record<string, Team>)
 
   // Convert the teams object into an array and sort it by points, then goal difference, then goals scored
   const table: Team[] = Object.values(teams).sort((a: Team, b: Team) => {

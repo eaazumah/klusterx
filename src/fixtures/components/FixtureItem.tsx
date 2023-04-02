@@ -25,9 +25,9 @@ const FixtureItem: React.FC<Props> = ({ fixture }) => {
         <Space w={20} />
         <Conditional renderIf={!fixture.upComing}>
           <Group spacing={5}>
-            <Text>{fixture.homeScore}</Text>
-            <Text>-</Text>
-            <Text>{fixture.awayScore}</Text>
+            <Text>
+              {fixture.homeScore} - {fixture.awayScore}
+            </Text>
           </Group>
         </Conditional>
         <Conditional renderIf={fixture.upComing}>

@@ -5,15 +5,15 @@ import { FixturesByDate } from '../../types/declarations'
 import FixtureItem from './FixtureItem'
 
 type Props = {
-  fixtureByDate: FixturesByDate
+  fixturesByDate: FixturesByDate
 }
 
-const FixturesByDateItem: React.FC<Props> = ({ fixtureByDate }) => {
+const FixturesByDateItem: React.FC<Props> = ({ fixturesByDate }) => {
   return (
     <Styled>
-      <Title italic>{fixtureByDate.date}</Title>
+      <Title italic>{fixturesByDate.date}</Title>
       <Divider />
-      {fixtureByDate.fixtures.map((fixture, index) => (
+      {fixturesByDate.fixtures.map((fixture, index) => (
         <FixtureItem fixture={fixture} key={index} />
       ))}
       <Space h='xl' />
