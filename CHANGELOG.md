@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/eaazumah/klusterx/compare/v1.2.0...v1.2.1) (2023-04-04)
+
+
+### Bug Fixes
+
+* page Not Found Error on Netlify Reactjs React Router ([0e7622f](https://github.com/eaazumah/klusterx/commit/0e7622fbe7a11838116625ccf5f1ccdc1ef0d1d9))
+
 # [1.2.0](https://github.com/eaazumah/klusterx/compare/v1.1.0...v1.2.0) (2023-04-02)
 
 
