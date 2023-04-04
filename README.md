@@ -118,98 +118,98 @@ To edit environment variables, create a file with name `.env` and copy the conte
 ### Directory Structure
 
 ```
-      ├───src/
-      │   ├───app/
-      │   │   ├───__tests__/
-      │   │   │   └───App.test.tsx
-      │   │   └───App.tsx
-      │   ├───assets/
-      │   │   └───logo.svg
-      │   ├───components/
-      │   │   ├───__tests__/
-      │   │   │   └───Conditional.test.tsx
-      │   │   └───Conditional.tsx
-      │   ├───data/
-      │   │   └───data.ts
-      │   ├───fixtures/
-      │   │   ├───__tests__/
-      │   │   │   ├───__snapshots__/
-      │   │   │   │   ├───FixtureItem.test.tsx.snap
-      │   │   │   │   ├───Fixtures.test.tsx.snap
-      │   │   │   │   ├───FixturesByDateItem.test.tsx.snap
-      │   │   │   │   └───TeamFixtures.test.tsx.snap
-      │   │   │   ├───FixtureItem.test.tsx
-      │   │   │   ├───Fixtures.test.tsx
-      │   │   │   ├───FixturesByDateItem.test.tsx
-      │   │   │   ├───TeamFixtures.test.tsx
-      │   │   │   ├───convertScoreToFixture.test.ts
-      │   │   │   ├───useFilterTeamFixtures.test.ts
-      │   │   │   └───useGenerateFixtures.test.ts
-      │   │   ├───components/
-      │   │   │   ├───FixtureItem.tsx
-      │   │   │   └───FixturesByDateItem.tsx
-      │   │   ├───hooks/
-      │   │   │   ├───convertScoreToFixture.ts
-      │   │   │   ├───useFilterTeamFixtures.ts
-      │   │   │   └───useGenerateFixtures.ts
-      │   │   ├───Fixtures.tsx
-      │   │   └───TeamFixtures.tsx
-      │   ├───hooks/
-      │   │   └───useAppSettings.ts
-      │   ├───layouts/
-      │   │   ├───__tests__/
-      │   │   │   ├───MainHeader.test.tsx
-      │   │   │   └───MainLayout.test.tsx
-      │   │   ├───components/
-      │   │   │   └───MainHeader.tsx
-      │   │   └───MainLayout.tsx
-      │   ├───providers/
-      │   │   └───AppThemeProvider.tsx
-      │   ├───redux/
-      │   │   ├───__tests__/
-      │   │   │   └───settingsSlice.test.ts
-      │   │   ├───settingsSlice.ts
-      │   │   └───store.ts
-      │   ├───router/
-      │   │   ├───__tests__/
-      │   │   │   └───router.test.tsx
-      │   │   ├───NoMatch.tsx
-      │   │   └───router.tsx
-      │   ├───table/
-      │   │   ├───__tests__/
-      │   │   │   ├───__snapshots__/
-      │   │   │   │   └───LeagueTable.test.tsx.snap
-      │   │   │   ├───LeagueTable.test.tsx
-      │   │   │   └───useGenerateLeagueTable.test.ts
-      │   │   ├───hooks/
-      │   │   │   └───useGenerateLeagueTable.ts
-      │   │   └───LeagueTable.tsx
-      │   ├───types/
-      │   │   ├───customs.d.ts
-      │   │   └───declarations.ts
-      │   ├───utils/
-      │   │   └───testUtils.tsx
-      │   ├───index.css
-      │   ├───index.tsx
-      │   ├───react-app-env.d.ts
-      │   ├───reportWebVitals.ts
-      │   └───setupTests.ts
-      ├───.env
-      ├───.eslintrc.json
-      ├───.gitignore
-      ├───.prettierrc
-      ├───.releaserc.json
-      ├───CHANGELOG.md
-      ├───Dockerfile
-      ├───README.md
-      ├───commitlint.config.js
-      ├───docker-compose.dev.yml
-      ├───docker-compose.yml
-      ├───list.md
-      ├───package.json
-      ├───tsconfig.json
-      ├───yarn-error.log
-      └───yarn.lock
+├───src/
+│   ├───app/
+│   │   ├───__tests__/
+│   │   │   └───App.test.tsx
+│   │   └───App.tsx
+│   ├───assets/
+│   │   └───logo.svg
+│   ├───components/
+│   │   ├───__tests__/
+│   │   │   └───Conditional.test.tsx
+│   │   └───Conditional.tsx
+│   ├───data/
+│   │   └───data.ts
+│   ├───fixtures/
+│   │   ├───__tests__/
+│   │   │   ├───__snapshots__/
+│   │   │   │   ├───FixtureItem.test.tsx.snap
+│   │   │   │   ├───Fixtures.test.tsx.snap
+│   │   │   │   ├───FixturesByDateItem.test.tsx.snap
+│   │   │   │   └───TeamFixtures.test.tsx.snap
+│   │   │   ├───FixtureItem.test.tsx
+│   │   │   ├───Fixtures.test.tsx
+│   │   │   ├───FixturesByDateItem.test.tsx
+│   │   │   ├───TeamFixtures.test.tsx
+│   │   │   ├───convertScoreToFixture.test.ts
+│   │   │   ├───useFilterTeamFixtures.test.ts
+│   │   │   └───useGenerateFixtures.test.ts
+│   │   ├───components/
+│   │   │   ├───FixtureItem.tsx
+│   │   │   └───FixturesByDateItem.tsx
+│   │   ├───hooks/
+│   │   │   ├───convertScoreToFixture.ts
+│   │   │   ├───useFilterTeamFixtures.ts
+│   │   │   └───useGenerateFixtures.ts
+│   │   ├───Fixtures.tsx
+│   │   └───TeamFixtures.tsx
+│   ├───hooks/
+│   │   └───useAppSettings.ts
+│   ├───layouts/
+│   │   ├───__tests__/
+│   │   │   ├───MainHeader.test.tsx
+│   │   │   └───MainLayout.test.tsx
+│   │   ├───components/
+│   │   │   └───MainHeader.tsx
+│   │   └───MainLayout.tsx
+│   ├───providers/
+│   │   └───AppThemeProvider.tsx
+│   ├───redux/
+│   │   ├───__tests__/
+│   │   │   └───settingsSlice.test.ts
+│   │   ├───settingsSlice.ts
+│   │   └───store.ts
+│   ├───router/
+│   │   ├───__tests__/
+│   │   │   └───router.test.tsx
+│   │   ├───NoMatch.tsx
+│   │   └───router.tsx
+│   ├───table/
+│   │   ├───__tests__/
+│   │   │   ├───__snapshots__/
+│   │   │   │   └───LeagueTable.test.tsx.snap
+│   │   │   ├───LeagueTable.test.tsx
+│   │   │   └───useGenerateLeagueTable.test.ts
+│   │   ├───hooks/
+│   │   │   └───useGenerateLeagueTable.ts
+│   │   └───LeagueTable.tsx
+│   ├───types/
+│   │   ├───customs.d.ts
+│   │   └───declarations.ts
+│   ├───utils/
+│   │   └───testUtils.tsx
+│   ├───index.css
+│   ├───index.tsx
+│   ├───react-app-env.d.ts
+│   ├───reportWebVitals.ts
+│   └───setupTests.ts
+├───.env
+├───.eslintrc.json
+├───.gitignore
+├───.prettierrc
+├───.releaserc.json
+├───CHANGELOG.md
+├───Dockerfile
+├───README.md
+├───commitlint.config.js
+├───docker-compose.dev.yml
+├───docker-compose.yml
+├───list.md
+├───package.json
+├───tsconfig.json
+├───yarn-error.log
+└───yarn.lock
 
 ```
 
