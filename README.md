@@ -2,8 +2,6 @@ klusterx Test Project
 
 - **[Access production deployment](https://klusterx.netlify.app/)**
 
-The objective for this test is to convert the current Angular 'smart' and presentation components displaying an order to a buyer into React components.
-
 A few things to note in the project:
 
 - **[Create Create React App](https://github.com/facebook/create-react-app)** -This project was bootstrapped with Create React App
