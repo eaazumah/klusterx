@@ -8,10 +8,12 @@ A few things to note in the project:
 
 - **[Create Create React App](https://github.com/facebook/create-react-app)** -This project was bootstrapped with Create React App
 - **[Mantine](https://mantine.dev/)** - A fully featured React component library
+- **[Redux/Redux Toolkit](https://redux-toolkit.js.org/)** - Redux is an open-source JavaScript library for managing and centralizing application state.
 - **[Dockerfile](https://docs.docker.com/engine/reference/builder/)** - Dockerfile to generate docker builds.
 - **[docker-compose](https://docs.docker.com/compose/)** - Docker compose script to start service in production mode.
 - **[.env file for configuration](#environment)** - Change server config like app port, mongo url etc
 - **[Testing Library](https://testing-library.com/)** - Using Testing Library for running test cases of the application.
+- **[Github Actions](https://github.com/features/actions/)** - GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline.
 
 ## I. Installation
 
@@ -118,6 +120,15 @@ To edit environment variables, create a file with name `.env` and copy the conte
 ### Directory Structure
 
 ```
+├───.github/
+│   └───workflows/
+│       ├───ci.yml
+│       └───release.yml
+├───.husky/
+│   ├───_/
+│   │   ├───.gitignore
+│   │   └───husky.sh
+│   └───commit-msg
 ├───src/
 │   ├───app/
 │   │   ├───__tests__/
